@@ -1,0 +1,16 @@
+<div class="col-lg-4">
+    <div class="card m-2 text-center">
+        <div class="card-body">
+            <svg class="rounded-circle"
+                 src="data:"
+                 alt="Placeholder image" role="img" aria-label="Placeholder: 140x140"
+                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                <text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+            </svg>
+            <h2>{{ object.first_name|title }} {{ object.last_name|title }}</h2>
+            <p><a class="btn btn-secondary" href="{% url 'main:students_item' object.pk %}" role="button">Посмотреть</a></p>
+            <p><a class="btn btn-warning" href="{% url 'main:students_update' object.pk %}" role="button">Изменить</a></p>
+            <p><a class="btn btn-danger" href="{% url 'main:students_delete' object.pk %}" role="button">Удалить</a></p>
+        </div>
+    </div>
+</div>

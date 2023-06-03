@@ -1,0 +1,7 @@
+{% extends 'main/base.html' %}
+
+{% block Итерация_по_студентам %}
+{% for object in objects_list %}
+    {% include 'main/includes/inc_student_card.html' %}
+{% endfor %}
+{% endblock %}

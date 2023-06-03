@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+
+{% block Итерация_по_студентам %}
+    <div class="col-12">
+        <a href="{% url 'main:students_create' %}" class="btn btn-primary m-2"> Создать студента</a>
+    </div>
+
+
+    {% for object in objects_list %}
+        {% include 'main/includes/inc_student_card.html' %}
+    {% endfor %}
+{% endblock %}
+

@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% block Итерация_по_студентам %}
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <table class="table">
+                    <tr>
+                        <td>Имя</td>
+                        <td>{{ object.first_name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Фамилия</td>
+                        <td>{{ object.last_name }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer">
+                <a href="{% url 'main:students_list' %}" class="btn btn-primary"><< Назад </a>
+                <a href="{% url 'main:toggle_activity' object.pk %}" class="btn btn-outline-warning float-xl-end"> Деактивировать </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <div class="row mb-5">
+        <div class="col-12">
+            (c) Этот блок переопределили. Эта надпись появится там, где его добавили.
+        </div>
+    </div>
+{% endblock %}
