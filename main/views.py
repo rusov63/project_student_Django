@@ -20,18 +20,18 @@ class StudentListView(ListView):
         'title': 'Список студентов'
     }
 
-    def get_queryset(self):
-        queryset = super().get_queryset()
-        queryset = queryset.filter(is_active=True)
-        return queryset
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     queryset = queryset.filter(is_active=True)
+    #     return queryset
 
 class StudentDetailView(DetailView):
     model = Student
 
-    def get_context_data(self, **kwargs):
-        context_data = super().get_context_data(**kwargs) #метод на получение данных.родительский метод super
-        context_data['title'] = context_data['object'] #object ключевое слово
-        return context_data
+    # def get_context_data(self, **kwargs):
+    #     context_data = super().get_context_data(**kwargs) #метод на получение данных.родительский метод super
+    #     context_data['title'] = context_data['object'] #object ключевое слово
+    #     return context_data
 # class StudentListView, StudentDetailView - реализован один студент и список студентов - read (CRUD)
 
 # создаем студента
